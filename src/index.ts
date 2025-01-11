@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import dataRouter from "./routes/dataRoutes";
+import fetchData from "./worker/fetchData";
 dotenv.config();
 
 const app = express();
@@ -14,6 +15,8 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+fetchData();
+
 app.use("/", dataRouter);
 
 app.get("/", (req, res) => {
@@ -22,5 +25,5 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT;
 app.listen(PORT || 3000, () => {
-  console.log(`server running at port: http;//localhost:${PORT}}`);
+  console.log(`server running at port: http://localhost:${PORT}`);
 });

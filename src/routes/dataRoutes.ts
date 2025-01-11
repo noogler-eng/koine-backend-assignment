@@ -6,7 +6,7 @@ dotenv.config();
 
 const router = express.Router();
 
-router.get("top-stats", getTopStats);
-router.get("deviation", getDeviation);
+router.get("/top-stats", getTopStats);
+router.get("/deviation", getDeviation);
 
 export default router;
