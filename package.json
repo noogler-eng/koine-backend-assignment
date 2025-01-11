@@ -12,10 +12,6 @@
   "description": "",
   "dependencies": {
     "@types/axios": "^0.14.4",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/mongoose": "^5.11.97",
-    "@types/node-cron": "^3.0.11",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "cron": "^3.5.0",
@@ -23,5 +19,12 @@
     "express": "^4.21.2",
     "mongoose": "^8.9.4",
     "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^22.10.5",
+    "@types/node-cron": "^3.0.11"
   }
 }
