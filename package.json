@@ -1,8 +1,10 @@
 {
   "name": "koinx-backend-assignment",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "build": "tsc -b && npm i",
+    "start": "nodemon dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
