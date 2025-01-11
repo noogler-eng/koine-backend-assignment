@@ -13,10 +13,10 @@ const getDeviation = async (req: any, res: any) => {
     if (records.length === 0)
       return res.status(404).send({ message: "No records found" });
 
-    const prices = records.map((record) => record.price);
-    const mean = prices.reduce((acc, price) => acc + price, 0) / prices.length;
+    const prices = records.map((record: any) => record.price);
+    const mean = prices.reduce((acc: number, price: number) => acc + price, 0) / prices.length;
     const variance =
-      prices.reduce((acc, price) => acc + Math.pow(price - mean, 2), 0) /
+      prices.reduce((acc: number, price: number) => acc + Math.pow(price - mean, 2), 0) /
       prices.length;
     const deviation = Math.sqrt(variance);
 

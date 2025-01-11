@@ -23,7 +23,7 @@ app.get("/", (req: any, res: any) => {
   res.send("this is koinx assignment");
 });
 
-const PORT: any = process.env.PORT;
+const PORT: any = process.env.PORT || 3000;
 app.listen(PORT || 3000, () => {
   console.log(`server running at port: http://localhost:${PORT}`);
 });
