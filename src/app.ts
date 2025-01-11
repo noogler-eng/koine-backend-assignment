@@ -13,17 +13,17 @@ app.use(express.json());
 mongoose
   .connect(process.env.MONODB_URL || "")
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .catch((err: any) => console.error("MongoDB connection error:", err));
 
 fetchData();
 
 app.use("/", dataRouter);
 
-app.get("/", (req, res) => {
+app.get("/", (req: any, res: any) => {
   res.send("this is koinx assignment");
 });
 
-const PORT = process.env.PORT;
+const PORT: any = process.env.PORT;
 app.listen(PORT || 3000, () => {
   console.log(`server running at port: http://localhost:${PORT}`);
 });

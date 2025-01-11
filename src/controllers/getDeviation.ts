@@ -23,7 +23,7 @@ const getDeviation = async (req: any, res: any) => {
     res.status(200).json({
       deviation: deviation,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send({ message: "Error calculating deviation" });
   }
 };

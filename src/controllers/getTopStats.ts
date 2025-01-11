@@ -15,7 +15,7 @@ const getTopStats = async (req: any, res: any) => {
       marketCap: cryptoData.marketCap,
       "24hChange": cryptoData.change,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send({ message: "Error fetching stats" });
   }
 };

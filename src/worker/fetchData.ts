@@ -34,7 +34,7 @@ const fetchData = async () => {
 
       await Coins.insertMany(cryptoData);
       console.log("working running.");
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error fetching coins data:", error);
     }
   });
